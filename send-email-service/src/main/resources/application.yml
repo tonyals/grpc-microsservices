@@ -1,0 +1,10 @@
+micronaut:
+  application:
+    name: sendEmailService
+grpc:
+  channels:
+    customer:
+      target: localhost:50052
+      plaintext: true
+  server:
+    port: 50055

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "br.com.tony.customer";
+
+package br.com.tony.customer;
+
+service CustomerService {
+  rpc FindCustomerById (FindCustomerByIdRequest) returns (CustomerResponse) {}
+}
+
+message FindCustomerByIdRequest {
+  int64 id = 1;
+}
+
+message CustomerResponse {
+  int64 id = 1;
+  string name = 2;
+  string email = 3;
+  string cardNumber = 4;
+}

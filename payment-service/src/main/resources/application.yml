@@ -1,0 +1,6 @@
+micronaut:
+  application:
+    name: payment-service
+grpc:
+  server:
+    port: 50054

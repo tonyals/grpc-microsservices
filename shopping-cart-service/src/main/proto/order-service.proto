@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "br.com.tony.shoppingcart";
+
+service OrderService {
+  rpc Order(OrderRequest) returns (OrderResponse) {}
+}
+
+message Product {
+  int64 productId = 1;
+  string name = 2;
+  double price = 3;
+  int32 quantity = 4;
+}
+
+message Customer {
+  int64 id = 1;
+}
+
+message OrderRequest {
+  Customer customer = 1;
+  Product product = 2;
+}
+
+message OrderResponse {
+  string orderConfirmation = 1;
+}

@@ -1,0 +1,6 @@
+applicationType: grpc
+defaultPackage: br.com.tony.shoppingcart
+testFramework: junit
+sourceLanguage: java
+buildTool: gradle
+features: [annotation-api, app-name, data, data-jpa, gradle, grpc, h2, java, java-application, jdbc-hikari, junit, logback, readme, shade, yaml]

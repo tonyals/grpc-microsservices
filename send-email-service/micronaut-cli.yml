@@ -1,0 +1,6 @@
+applicationType: grpc
+defaultPackage: br.com.tony.sendemail
+testFramework: junit
+sourceLanguage: java
+buildTool: gradle
+features: [annotation-api, app-name, gradle, grpc, java, java-application, junit, logback, rabbitmq, readme, shade, yaml]

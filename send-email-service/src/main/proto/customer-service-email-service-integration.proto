@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "br.com.tony.sendemail";
+
+package br.com.tony.customer;
+
+service CustomerService {
+  rpc FindCustomerById (CustomerRequest) returns (CustomerResponse) {}
+}
+
+message CustomerRequest {
+  int64 id = 1;
+}
+
+message CustomerResponse {
+  string name = 2;
+  string email = 3;
+}
