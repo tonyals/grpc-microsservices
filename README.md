@@ -32,11 +32,12 @@ execute os comandos abaixo dentro do diretório raiz dos projetos (mesmo nível 
 - Agora, execute a classe principal de **cada um** dos serviços e deixe-as executando;
 
 - Para testar a comunicação utilize um client gRPC como o [Insomnia](https://insomnia.rest/), importe o arquivo
-**order-service.proto** que está no diretório **shopping-cart-service/src/main/proto**:
+**order-service.proto** que está no diretório **shopping-cart-service/src/main/proto**, configure a porta gRPC como **0.0.0.0:50051** e selecione o método **order**:
 
 <img src="./img/dashboard-insomnia.png" alt="Import proto client gRPC"/>
 
-- Configure a porta gRPC como **0.0.0.0:50051** e selecione o método **order**. O corpo da requisição deverá conter este formato:
+
+-  O corpo da requisição deverá conter este formato:
 ``` javascript
 {
     "customer": {
@@ -49,7 +50,7 @@ execute os comandos abaixo dentro do diretório raiz dos projetos (mesmo nível 
 }
 ```
 
-Caso queira acessar o console do RabbitMQ acesse:
+Credenciais de acesso ao RabbitMQ:
  - http://localhost:15672
  - usuário: user
  - senha: user
