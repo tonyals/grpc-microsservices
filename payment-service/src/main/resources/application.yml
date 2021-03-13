@@ -4,3 +4,6 @@ micronaut:
 grpc:
   server:
     port: 50054
+rabbitmq:
+  username: user
+  password: user

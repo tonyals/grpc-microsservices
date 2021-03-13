@@ -4,7 +4,6 @@ import br.com.tony.sendemail.CustomerRequest;
 import br.com.tony.sendemail.CustomerResponse;
 import br.com.tony.sendemail.PaymentResponse;
 import br.com.tony.sendemail.config.ChannelFactory;
-import br.com.tony.sendemail.rabbit.PaymentStatusQueueConsumer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

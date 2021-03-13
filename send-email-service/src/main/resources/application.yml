@@ -1,6 +1,7 @@
 micronaut:
   application:
     name: sendEmailService
+
 grpc:
   channels:
     customer:
@@ -8,3 +9,7 @@ grpc:
       plaintext: true
   server:
     port: 50055
+
+rabbitmq:
+  username: user
+  password: user

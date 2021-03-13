@@ -4,11 +4,15 @@ import br.com.tony.shoppingcart.PaymentRequest;
 import br.com.tony.shoppingcart.entity.Order;
 import br.com.tony.shoppingcart.integration.CustomerServiceIntegration;
 import br.com.tony.shoppingcart.rabbit.PaymentProcessorQueuePublisher;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.inject.Singleton;
 
 @Singleton
 public class PaymentService {
+
+    private static final Logger logger = LoggerFactory.getLogger(PaymentService.class);
 
     private final CustomerServiceIntegration customerServiceIntegration;
     private final PaymentProcessorQueuePublisher paymentProcessorQueuePublisher;
@@ -30,5 +34,11 @@ public class PaymentService {
                 .setCardNumber(customer.getCardNumber())
                 .setAmount(order.getAmount())
                 .build());
+
+        logger.info("## DADOS ENVIADOS PARA O SERVIÇO DE PAGAMENTOS ##");
+        logger.info("Id do pedido: " + order.getId());
+        logger.info("Cliente: " + customer.getName());
+        logger.info("Você será notificado do andamento do pedido!.");
+        logger.info("#################################################");
     }
 }

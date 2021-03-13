@@ -4,8 +4,8 @@ CREATE TABLE customer (
     email VARCHAR(255) NOT NULL,
     card_number VARCHAR(255) NOT NULL,
     CONSTRAINT id UNIQUE (id),
-    CONSTRAINT name UNIQUE (name),
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    CONSTRAINT name UNIQUE (name)
+);
 
 INSERT INTO customer (id,name,email,card_number) VALUES (1,'Christine S. Schmidt', 'a@a.com', '4485366752589003');
 INSERT INTO customer (id,name,email,card_number) VALUES (2,'Mac G. Martin', 'b@b.com', '4024007106816894');

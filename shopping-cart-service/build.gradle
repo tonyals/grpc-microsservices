@@ -32,7 +32,7 @@ dependencies {
     implementation("io.micronaut.rabbitmq:micronaut-rabbitmq")
     runtime("io.micronaut:micronaut-discovery-client")
     runtimeOnly("ch.qos.logback:logback-classic")
-    runtimeOnly("com.h2database:h2")
+    runtimeOnly("org.postgresql:postgresql")
     testImplementation("io.micronaut:micronaut-http-client")
 }
 
