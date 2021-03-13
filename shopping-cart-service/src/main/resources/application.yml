@@ -7,6 +7,9 @@ grpc:
     customer:
       target: localhost:50052
       plaintext: true
+    product:
+      target: localhost:50053
+      plaintext: true
   server:
     port: 50051
 

@@ -8,12 +8,11 @@ grpc:
 
 datasources:
   default:
-    url: jdbc:h2:mem:productDb;MVCC=TRUE;
-    driverClassName: org.h2.Driver
-    username: sa
-    password: ''
-    schema-generate: CREATE_DROP
-    dialect: H2
+    url: jdbc:postgresql://localhost:5434/productsdatabase
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: password
+
 jpa:
   default:
     properties:
@@ -21,6 +20,7 @@ jpa:
         hbm2ddl:
           auto: none
         show_sql: true
+
 flyway:
   datasources:
     default:

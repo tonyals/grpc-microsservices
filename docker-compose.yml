@@ -33,14 +33,29 @@ services:
     ports:
       - "5433:5433"
     volumes:
-      - shopping-cart-volume:/var/lib/postgresql/shoppingcartdatabase/data
+      - shopping-cart-volume:/var/lib/postgresql/shoppingdatabase/data
     command: -p 5433
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
       POSTGRES_DB: shoppingdatabase
   
+  products-db:
+    image: postgres:13.2-alpine
+    healthcheck:
+      test: psql postgres --command "select 1" -U postgres
+    ports:
+      - "5434:5434"
+    volumes:
+      - products-volume:/var/lib/postgresql/productsdatabase/data
+    command: -p 5434
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: productsdatabase
+  
 volumes:
   rabbitmq-volume:
   customer-volume:
   shopping-cart-volume:
+  products-volume:
