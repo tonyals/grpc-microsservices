@@ -1,17 +1,17 @@
-# [WIP] Este exemplo ainda está em desenvolvimento e foi testado somente em ambiente Linux Ubuntu.
+# Este exemplo foi testado somente em ambiente Linux Ubuntu.
 
 ## Fluxo do exemplo
 
 <img src="./img/grpc-microsservices-schema.png" alt="Schema"/>
 
-### RabbitMQ e Protocol Buffers
+## RabbitMQ e Protocol Buffers
 
 Este exemplo utiliza o [Protocol Buffers](https://developers.google.com/protocol-buffers) para serializar os dados enviados para as filas RabbitMQ. Os formatos de mensagem foram definidos nos arquivos .proto e a serialização 
 padrão do [Micronaut (Jackson)](https://micronaut-projects.github.io/micronaut-rabbitmq/latest/guide/#serdes) foi
 sobrescrita para atender ao propósito deste exemplo. Os arquivos com a nova implementação estão no diretório /config dos serviços que comunicam com a fila.
 
 
-#### Como executar
+## Como executar
 
 - Importe a pasta do projeto na sua IDE de preferência, no exemplo uso o Intellij Community:
 
