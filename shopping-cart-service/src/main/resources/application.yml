@@ -21,4 +21,4 @@ datasources:
     username: postgres
     password: password
 
-jpa.default.properties.hibernate.hbm2ddl.auto: update
+jpa.default.properties.hibernate.hbm2ddl.auto: create

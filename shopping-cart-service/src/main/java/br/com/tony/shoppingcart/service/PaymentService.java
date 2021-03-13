@@ -35,10 +35,11 @@ public class PaymentService {
                 .setAmount(order.getAmount())
                 .build());
 
-        logger.info("## DADOS ENVIADOS PARA O SERVIÇO DE PAGAMENTOS ##");
+        logger.info("## ENVIANDO DADOS PARA O SERVIÇO DE PAGAMENTOS ##");
         logger.info("Id do pedido: " + order.getId());
         logger.info("Cliente: " + customer.getName());
-        logger.info("Você será notificado do andamento do pedido!.");
+        logger.info("Valor: R$ " + order.getAmount());
+        logger.info("Você será notificado do andamento do pedido!");
         logger.info("#################################################");
     }
 }
