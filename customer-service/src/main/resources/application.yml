@@ -18,7 +18,7 @@ jpa:
     properties:
       hibernate:
         hbm2ddl:
-        show_sql: true
+        show_sql: false
 
 flyway:
   datasources:

@@ -26,7 +26,7 @@ public class PaymentResponseSerializerDeserializer implements RabbitMessageSerDe
     @Override
     public byte[] serialize(PaymentResponse data, MutableBasicProperties properties) {
         if (data == null) {
-            return null;
+            throw new SerializerDeserializerException("Dados não podem ser nulos.");
         }
         return data.toByteArray();
     }

@@ -1,6 +1,7 @@
 package br.com.tony.payment.config;
 
 import br.com.tony.payment.PaymentRequest;
+import br.com.tony.payment.exception.SerializerDeserializerException;
 import com.google.protobuf.InvalidProtocolBufferException;
 import io.micronaut.core.type.Argument;
 import io.micronaut.rabbitmq.bind.RabbitConsumerState;
@@ -17,14 +18,14 @@ public class PaymentRequestSerializerDeserializer implements RabbitMessageSerDes
         try {
             return PaymentRequest.parseFrom(consumerState.getBody());
         } catch (InvalidProtocolBufferException e) {
-            throw new RuntimeException(e);
+            throw new SerializerDeserializerException(e.getMessage());
         }
     }
 
     @Override
     public byte[] serialize(PaymentRequest data, MutableBasicProperties properties) {
         if (data == null) {
-            return null;
+            throw new SerializerDeserializerException("Dados não podem ser nulos.");
         }
         return data.toByteArray();
     }
