@@ -1,6 +1,10 @@
-# Este exemplo foi testado somente em ambiente Linux Ubuntu.
+## Microsserviços utilizando Micronaut, Java, gRPC e RabbitMQ
 
-## Fluxo do exemplo
+**Este projeto foi testado somente em ambiente Linux Ubuntu.**
+
+Este repositório possui um exemplo prático de comunicação entre microsserviços utilizando Micronaut, Java, gRPC e RabbitMQ. 
+
+## Fluxo resumido
 
 <img src="./img/grpc-microsservices-schema.png" alt="Schema"/>
 
