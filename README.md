@@ -12,7 +12,7 @@ Este repositório possui um exemplo prático de comunicação entre microsservi�
 
 Este exemplo utiliza o [Protocol Buffers](https://developers.google.com/protocol-buffers) para serializar os dados enviados para as filas RabbitMQ. Os formatos de mensagem foram definidos nos arquivos .proto e a serialização 
 padrão do [Micronaut (Jackson)](https://micronaut-projects.github.io/micronaut-rabbitmq/latest/guide/#serdes) foi
-sobrescrita para atender ao propósito deste exemplo. Os arquivos com a nova implementação estão no diretório /config dos serviços que comunicam com a fila.
+sobrescrita para atender ao propósito deste exemplo. Os arquivos com a nova implementação estão no diretório /config dos serviços que comunicam com a fila. Você pode consultar este artigo: [Micronaut: Utilizando Protobuf para serialização e desserialização dos dados enviados ao RabbitMQ](https://tonyaugusto.medium.com/micronaut-utilizando-protobuf-para-serializa%C3%A7%C3%A3o-e-desserializa%C3%A7%C3%A3o-dos-dados-enviados-ao-rabbitmq-aca71d1897bd) para obter mais detalhes.
 
 
 ## Como executar
