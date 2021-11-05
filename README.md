@@ -42,15 +42,15 @@ execute os comandos abaixo dentro do diretório raiz dos projetos (mesmo nível 
 
 
 -  O corpo da requisição deverá conter este formato:
-``` javascript
+``` json
 {
-    "customer": {
-	    "id": 2
-	},
-	"product": {
-			"productId": 4,
-			"quantity": 4
-		}
+"customer": {
+    "id": 2
+    },
+"product": {
+   "productId": 4,
+   "quantity": 4
+   }
 }
 ```
 
